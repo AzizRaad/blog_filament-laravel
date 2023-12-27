@@ -48,13 +48,6 @@ class CategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                ->before(
-                    function(){
-                        if (auth()->user()->id == $this->user_id){
-
-                        }
-                    }
-                ),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
